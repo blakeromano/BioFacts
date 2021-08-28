@@ -21,6 +21,8 @@ class Home(ListView):
 
 class Login(LoginView):
   template_name = 'login.html'
+  redirect_field_name='home'
+  redirect_authenticated_user=True
 
 def signup(request):
   error_message = ''
