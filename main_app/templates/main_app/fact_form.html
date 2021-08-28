@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section>
+  {% if object %}
+    <h1>Edit Your Fact</h1>
+  {% else %}
+    <h1>Post a New Fact</h1>
+  {% endif %}
+  <form method="POST">
+  {% csrf_token %}
+  <table>
+    {{form.as_table}}
+  </table>
+  <button type="submit">Submit!</button>
+  </form>
+</section>
+{% endblock content %}

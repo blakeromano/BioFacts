@@ -6,11 +6,17 @@
 <section>
   {% for fact in fact_list %}
   <div>
-    {% comment %} <a href="{% url 'fact_detail' fact.id %}"> {% endcomment %}
+    <a href="{% url 'fact_detail' fact.id %}">
       <div>
+        {% if fact.photo.url %}
+          <img src="{{ fact.photo.url }}" alt="">
+        {% else %}
+          <img src="" alt="">
+        {% endif %}
         <h2>{{ fact.title }}</h2>
         <p>{{ fact.description }}</p>
         <p>Written By: {{ fact.author }}</p>
+        <p>Posted On: {{ fact.date }}</p>
       </div>
     </a>
   </div>

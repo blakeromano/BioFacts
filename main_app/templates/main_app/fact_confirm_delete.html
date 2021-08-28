@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div>
+  <h1>Delete Fact</h1>
+  <h2>Are you sure you want to delete your fact?</h2>
+  <form action="" method="post">
+    {% csrf_token %}
+    <a href="{% url 'fact_detail' fact.id %}">Cancel</a>
+    <button type="submit">Delete</button>
+  </form>
+</div>
+{% endblock content %}
