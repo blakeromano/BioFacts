@@ -5,8 +5,8 @@ from django.contrib.auth.views import LoginView
 
 # Create your views here.
 
-# class Home(ListView):
-#   model=Fact
+class Home(ListView):
+  model={'test': 'test'}
 
 class Login(LoginView):
-  template_name='login.html'
+  template_name = 'login.html'
