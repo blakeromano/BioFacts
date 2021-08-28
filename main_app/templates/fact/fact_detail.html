@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>{{ fact.title }}</h1>
+  {% if fact.photo.url %}
+  
+  {% endif %}
+  <h3>Change your facts photo</h3>
+    <p id="file-name"></p>
+    <form 
+      action="{% url 'add_photo' fact.id %}"
+      enctype="multipart/form-data"
+      method="POST"
+    >
+      {% csrf_token %}
+      <label class="btn secondary">
+        Choose photo
+        <input type="file" name="photo-file" id="file-input">
+      </label>
+      <button type="submit" class="btn submit">Upload Photo</button>
+    </form>
+{% endblock content %}

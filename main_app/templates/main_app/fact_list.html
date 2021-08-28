@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Most Popular Facts</h1>
+
+<section>
+  {% for fact in fact_list %}
+  <div>
+    {% comment %} <a href="{% url 'fact_detail' fact.id %}"> {% endcomment %}
+      <div>
+        <h2>{{ fact.title }}</h2>
+        <p>{{ fact.description }}</p>
+        <p>Written By: {{ fact.author }}</p>
+      </div>
+    </a>
+  </div>
+  {% endfor %}
+</section>
+{% endblock content %}
