@@ -1,7 +1,27 @@
 body {
-  background-color: rgb(6, 95, 12);
+  background-color: #41b3a3;
+  font-family: 'Lato', sans-serif;
 }
 a {
   text-decoration: none;
   color: black;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-item {
+  background-color: #e27d60;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding: 1rem;
+  border: 2px black solid;
+  border-radius: 1.5rem;
+  
+}
+
+.navbar-item:hover {
+
 }

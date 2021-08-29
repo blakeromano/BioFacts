@@ -6,7 +6,7 @@
 
 {% block content %}
 <section>
-  <form action="{% url 'login' %}" method="post" class="login">
+  <form action="{% url 'loginuser' %}" method="post" class="login">
     <h1>Login</h1>
     {% csrf_token %}
     {{ form.as_p }}
