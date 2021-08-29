@@ -59,8 +59,9 @@ def add_photo(request, pk):
     try:
       s3.upload_fileobj(photo_file, BUCKET, key)
       url = f"{S3_BASE_URL}{BUCKET}/{key}"
-      photo = Photo(url=url, pk=pk)
-      fact_photo = Photo.objects.filter(pk=pk)
+      fact = Fact.objects.get(id = pk)
+      photo = Photo(url=url, fact=fact)
+      fact_photo = Photo.objects.filter(fact=pk)
       if fact_photo.first():
         fact_photo.first().delete()
       photo.save()

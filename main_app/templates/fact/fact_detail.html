@@ -1,8 +1,11 @@
 {% extends 'base.html' %}
+{% load static %}
+{% block head %}
 
+{% endblock head %}
 {% block content %}
   <section>
-  {% if fact.photo.url %}
+  {% if fact.photo %}
   <img src="{{ fact.photo.url }}" alt="An Image About The Biology Fact">
   {% else %}
   
