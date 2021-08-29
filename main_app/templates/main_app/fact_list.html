@@ -1,10 +1,12 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block head %}
-
+<link rel="stylesheet" type='text/css' href="{% static 'css/home.css' %}">
 {% endblock head %}
 {% block content %}
-<h1>Most Popular Facts</h1>
+<div class='header'>
+  <h1 class='header-text'>🪴 Recently Posted Facts 🐋</h1>
+</div>
 
 <section>
   {% for fact in fact_list %}
