@@ -4,6 +4,45 @@
   align-items: center;
 }
 .header-text {
+  text-align: center;
   font-size: 3rem;
   margin-bottom: 2rem;
+}
+
+.fact-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card {
+  background-color: #C38D9E;
+  width: 25vw;
+  padding: 0.75rem;
+  border: 3px black solid;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: max-content;
+  text-align: center;
+  margin: 20px 0 20px 0;
+}
+
+.image {
+  width: 20vw;
+  border-radius: 1rem;
+}
+
+.fact-title {
+  font-size: 1.6rem
+}
+
+.fact-date, .fact-author {
+  font-size: 0.9rem;
+}
+
+.fact-desc {
+  font-size: 1.1rem;
 }

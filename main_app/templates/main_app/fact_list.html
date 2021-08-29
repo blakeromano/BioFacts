@@ -8,20 +8,20 @@
   <h1 class='header-text'>🪴 Recently Posted Facts 🐋</h1>
 </div>
 
-<section>
+<section class='fact-list'>
   {% for fact in fact_list %}
-  <div>
+  <div class='card'>
     <a href="{% url 'fact_detail' fact.id %}">
       <div>
         {% if fact.photo.url %}
-          <img src="{{ fact.photo.url }}" alt="">
+          <img class='image' src="{{ fact.photo.url }}" alt="">
         {% else %}
-          <img src="" alt="">
+          <img class='image' src="" alt="">
         {% endif %}
-        <h2>{{ fact.title }}</h2>
-        <p>{{ fact.description }}</p>
-        <p>Written By: {{ fact.author }}</p>
-        <p>Posted On: {{ fact.date }}</p>
+        <h2 class='fact-title'>{{ fact.title }}</h2>
+        <p class='fact-desc'>{{ fact.description }}</p>
+        <p class='fact-author'>Written By: {{ fact.author }}</p>
+        <p class='fact-date'>Posted On: {{ fact.date }}</p>
       </div>
     </a>
   </div>
