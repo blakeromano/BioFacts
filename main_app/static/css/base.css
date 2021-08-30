@@ -1,6 +1,19 @@
 body {
-  background-color: #41b3a3;
   font-family: 'Lato', sans-serif;
+  background: linear-gradient(-45deg, #3ae461, #1ad3b8, #23a6d5, #4adc0c);
+  background-size: 400% 400%;
+  animation: gradient 12s ease infinite;
+}
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
 }
 a {
   text-decoration: none;
@@ -15,18 +28,18 @@ nav {
   height: min-content;
 }
 .navbar-item {
-  background-color: #e27d60;
+  background-color: #00A896;
   margin-left: 1rem;
   margin-right: 1rem;
   padding: 1rem;
   border: 2px black solid;
   border-radius: 1.5rem;
-}
-.navbar-item-div {
+  font-size: 20px;
+  box-shadow: 10px 10px 10px #0c3376;
 }
 
 .navbar-item:hover {
-
+  background-color: #00ffe5;
 }
 
 @media (max-width: 820px) {

@@ -1,0 +1,19 @@
+.fact-text {
+  max-width: 40vw;
+  text-align: center; 
+}
+.fact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fact-img {
+  width: 40vw;
+}
+.fact-title {
+  margin: 0px;
+  font-size: 64px;
+}
+.fact-desc {
+  
+}

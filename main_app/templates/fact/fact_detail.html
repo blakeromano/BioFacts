@@ -1,20 +1,28 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block head %}
-
+<link rel="stylesheet" type='text/css' href="{% static 'css/detail.css' %}">
 {% endblock head %}
 {% block content %}
-  <section>
-  {% if fact.photo %}
-  <img src="{{ fact.photo.url }}" alt="An Image About The Biology Fact">
-  {% else %}
-  
-  {% endif %}
-  <h1>{{ fact.title }}</h1>
-  </section>
+  <section class='main-section'>
+  <div class='fact-container'>
+    {% if fact.photo %}
+    <img class='fact-img'src="{{ fact.photo.url }}" alt="An Image About The Biology Fact">
+    {% else %}
+    
+    {% endif %}
+  </div>
+  <div class='fact-text'>
+    <h1 class='fact-title'>{{ fact.title }}</h1>
+    <p class='fact-desc'>{{ fact.description }}</p>
+    <p class='fact-author'>Written By: {{ fact.author }}</p>
+    <p class='fact-date'>Posted On: {{ fact.date }}</p>
+  </div>
 
+  </sectionc>
   {% if fact.author == user %}
-  <h3>Change your facts photo</h3>
+<section>
+  <h3>Change your Fact's Photo</h3>
     <p id="file-name"></p>
     <form 
       action="{% url 'add_photo' fact.id %}"
@@ -32,5 +40,6 @@
     <a href="{% url 'fact_update' fact.id %}">Edit</a>
     <a href="{% url 'fact_delete' fact.id %}">Delete</a>
   </div>
+</section>
   {% endif %}
 {% endblock content %}
