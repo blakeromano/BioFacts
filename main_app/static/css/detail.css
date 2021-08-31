@@ -32,14 +32,20 @@
 
 .photo-change-header {
   font-size: 28px;
-  margin-bottom: -10px;
+  margin-bottom: 10px;
 }
 
-#file-input {
-  margin-left: 5rem;
+
+
+#file-input:hover {
+  cursor: pointer;
 }
 
-.edit, .delete {
+input[type="file"] {
+  display: none;
+}
+
+.edit, .delete, .btn-submit-photo {
   height: 3rem;
   width: 6rem;
   font-size: 16px;
@@ -50,10 +56,18 @@
 
 }
 
-.edit:hover, .delete:hover {
+.btn-submit-photo {
+  margin-top: 20px
+}
+
+.edit:hover, .delete:hover, .btn-submit-photo:hover {
   background-color: #00ffe5;
   cursor: pointer;
   box-shadow: 7.5px 7.5px 7.5px #0c3376;
+}
+
+.image-label:hover {
+  cursor: pointer;
 }
 
 .edit-div {

@@ -22,12 +22,12 @@
           method="POST"
         >
           {% csrf_token %}
-          <label class="btn secondary">
-            
+          <label class="image-label">
+            Select an Image to Upload Here
             <input type="file" name="photo-file" id="file-input">
             <br>
           </label>
-          <button type="submit" class="btn submit">Upload Photo</button>
+          <button type="submit" class="btn-submit-photo">Upload Photo</button>
         </form>
       <div class='edit-div'>
         <a href="{% url 'fact_update' fact.id %}">
