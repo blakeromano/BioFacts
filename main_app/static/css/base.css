@@ -35,11 +35,12 @@ nav {
   border: 2px black solid;
   border-radius: 1.5rem;
   font-size: 20px;
-  box-shadow: 10px 10px 10px #0c3376;
+  box-shadow: 5px 5px 5px #0c3376;
 }
 
 .navbar-item:hover {
   background-color: #00ffe5;
+  box-shadow: 10px 10px 10px #0c3376;
 }
 
 @media (max-width: 820px) {

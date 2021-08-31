@@ -12,34 +12,45 @@
     
     {% endif %}
   </div>
-  <div class='fact-text'>
-    <h1 class='fact-title'>{{ fact.title }}</h1>
-    <p class='fact-desc'>{{ fact.description }}</p>
-    <p class='fact-author'>Written By: {{ fact.author }}</p>
-    <p class='fact-date'>Posted On: {{ fact.date }}</p>
+  {% if fact.author == user %}
+    <section class='editing-sect'>
+      <h3 class='photo-change-header'>Change your Fact's Photo</h3>
+        <p id="file-name"></p>
+        <form 
+          action="{% url 'add_photo' fact.id %}"
+          enctype="multipart/form-data"
+          method="POST"
+        >
+          {% csrf_token %}
+          <label class="btn secondary">
+            
+            <input type="file" name="photo-file" id="file-input">
+            <br>
+          </label>
+          <button type="submit" class="btn submit">Upload Photo</button>
+        </form>
+      <div class='edit-div'>
+        <a href="{% url 'fact_update' fact.id %}">
+        <button class='edit'>
+        Edit
+        </button>
+        </a>
+        <a href="{% url 'fact_delete' fact.id %}">
+        <button class='delete'>
+        Delete
+        </button>
+        </a>
+      </div>
+    </section>
+  {% endif %}
+  <div class='fact-text-div'>
+    <div class='fact-text'>
+      <h1 class='fact-title'>{{ fact.title }}</h1>
+      <p class='fact-desc'>{{ fact.description }}</p>
+      <p class='fact-author'>Written By: {{ fact.author }}</p>
+      <p class='fact-date'>Posted On: {{ fact.date }}</p>
+    </div>
   </div>
 
-  </sectionc>
-  {% if fact.author == user %}
-<section>
-  <h3>Change your Fact's Photo</h3>
-    <p id="file-name"></p>
-    <form 
-      action="{% url 'add_photo' fact.id %}"
-      enctype="multipart/form-data"
-      method="POST"
-    >
-      {% csrf_token %}
-      <label class="btn secondary">
-        Choose photo
-        <input type="file" name="photo-file" id="file-input">
-      </label>
-      <button type="submit" class="btn submit">Upload Photo</button>
-    </form>
-  <div>
-    <a href="{% url 'fact_update' fact.id %}">Edit</a>
-    <a href="{% url 'fact_delete' fact.id %}">Delete</a>
-  </div>
-</section>
-  {% endif %}
+  </section>
 {% endblock content %}

@@ -49,6 +49,7 @@
 }
 .card:hover {
   background-color: #00ffe5;
+  box-shadow: 16px 16px 16px #0c3376;
 }
 
 @media (max-width: 500px) {
