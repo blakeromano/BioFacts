@@ -1,21 +1,23 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block head %}
-
+<link rel="stylesheet" href="{% static 'css/form.css' %}">
 {% endblock head %}
 {% block content %}
-<section>
   {% if object %}
-    <h1>Edit Your Fact</h1>
+    <h1 class='header'>Edit Your Fact</h1>
   {% else %}
-    <h1>Post a New Fact</h1>
+    <h1 class='header'>Post a New Fact</h1>
   {% endif %}
+<section class='form-sect'>
   <form method="POST">
   {% csrf_token %}
   <table>
     {{form.as_table}}
   </table>
-  <button type="submit">Submit!</button>
+  <div class='submit-div'>
+    <button class='submit-btn' type="submit">Submit!</button>
+  </div>
   </form>
 </section>
 {% endblock content %}

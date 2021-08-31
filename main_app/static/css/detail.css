@@ -35,7 +35,9 @@
   margin-bottom: 10px;
 }
 
-
+.fact-desc {
+  font-size: 24px;
+}
 
 #file-input:hover {
   cursor: pointer;
