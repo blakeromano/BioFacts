@@ -1,16 +1,20 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block head %}
-
+<link rel="stylesheet" href="{% static 'css/confirm-delete.css' %}">
 {% endblock head %}
 {% block content %}
-<div>
+<div class='delete-main'>
   <h1>Delete Fact</h1>
   <h2>Are you sure you want to delete your fact?</h2>
   <form action="" method="post">
     {% csrf_token %}
-    <a href="{% url 'fact_detail' fact.id %}">Cancel</a>
-    <button type="submit">Delete</button>
+    <a href="{% url 'fact_detail' fact.id %}">
+    <button class='button-delete cancel'class='button-delete cancel'class='button-delete cancel'class='button-delete cancel' type="reset" >
+    Cancel
+    </button>
+    </a>
+    <button class='button-delete delete' type="submit">Delete</button>
   </form>
 </div>
 {% endblock content %}
