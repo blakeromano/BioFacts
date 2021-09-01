@@ -1,7 +1,9 @@
 body {
   font-family: 'Lato', sans-serif;
   background: linear-gradient(-45deg, #3ae461, #1ad3b8, #23a6d5, #4adc0c);
-  background-size: 1000% 1000%;
+  background-size: 100%;
+  background-repeat: repeat-y;
+  background-attachment: fixed;
   animation: gradient 12s ease infinite;
 }
 @keyframes gradient {

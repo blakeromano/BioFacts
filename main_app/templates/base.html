@@ -21,7 +21,7 @@
     <a class='navbar-logo' href="{% url 'home' %}"><img src="{% static 'images/BioFacts-logo.png' %}" alt="Logo"></a>
   </div>
   <div class='navbar-item-div'>
-    <a class='navbar-item' href="{% url 'about' %}">🦤 About 🦤</a>
+    {% comment %} <a class='navbar-item' href="{% url 'about' %}">🦤 About 🦤</a> {% endcomment %}
     <a class='navbar-item' href="{% url 'fact_create' %}">💡 Post a New Fact 💡</a>
     <a class='navbar-item' href="{% url 'logout' %}">😿 Logout 😿</a>
   </div>
@@ -30,7 +30,7 @@
     <a class='navbar-logo' href="{% url 'home' %}"><img src="{% static 'images/BioFacts-logo.png' %}" alt="Logo"></a>
   </div>
   <div class='navbar-item-div'>
-    <a class='navbar-item' href="{% url 'about' %}">🦤 About 🦤</a>
+    {% comment %} <a class='navbar-item' href="{% url 'about' %}">🦤 About 🦤</a> {% endcomment %}
     <a class='navbar-item' href="{% url 'loginuser' %}">🦧 Login 🦧</a>
     <a class='navbar-item' href="{% url 'signup' %}">🐣 Signup 🐣</a>
   </div>    
