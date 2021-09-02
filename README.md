@@ -58,7 +58,7 @@ Blake is a full stack web developer from the Boston, MA area, with a passion for
 
 ## Screenshots
 
-![Screenshot 1](public/screenshots/ShopIndex.png)
-![Screenshot 2](public/screenshots/ProductIndex.png)
+![Screenshot 1](readmePics/home.png)
+![Screenshot 2](readmePics/form.png)
 
 [Back to Top](#top)
